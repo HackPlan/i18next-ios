@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01165F6F1D59CFA900682947 /* i18nextiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 01165F6E1D59CFA900682947 /* i18nextiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01F0CA5F1D5D85B000B4F4D5 /* I18Next.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F20FD22181EC0B00008F1C8 /* I18Next.m */; };
+		01F0CA601D5D85B700B4F4D5 /* I18NextCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFAFF85187AAE0700A5EE68 /* I18NextCache.m */; };
+		01F0CA611D5D85BC00B4F4D5 /* I18NextConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F020087182BAC160079D93C /* I18NextConnection.m */; };
+		01F0CA621D5D85C200B4F4D5 /* I18NextLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F75F0B1182BFDAB00052192 /* I18NextLoader.m */; };
+		01F0CA631D5D85C600B4F4D5 /* I18NextPlurals.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F30335E1822A5C70066DA20 /* I18NextPlurals.m */; };
+		01F0CA641D5D85CC00B4F4D5 /* NSObject+I18Next.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F303353182143CB0066DA20 /* NSObject+I18Next.m */; };
+		01F0CA651D5D85D000B4F4D5 /* NSString+I18Next.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F923CEF18201D8B00B59924 /* NSString+I18Next.m */; };
+		01F0CA661D5D863500B4F4D5 /* I18Next.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F20FD20181EC0B00008F1C8 /* I18Next.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F020088182BAC160079D93C /* I18NextConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F020087182BAC160079D93C /* I18NextConnection.m */; };
 		0F0C8167182AC555001A5CED /* I18NextLoadSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0C8166182AC555001A5CED /* I18NextLoadSpec.m */; };
 		0F20FD1C181EC0B00008F1C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F20FD1B181EC0B00008F1C8 /* Foundation.framework */; };
@@ -68,6 +77,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01165F6C1D59CFA900682947 /* i18nextiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = i18nextiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01165F6E1D59CFA900682947 /* i18nextiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i18nextiOS.h; sourceTree = "<group>"; };
+		01165F701D59CFA900682947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F020086182BAC160079D93C /* I18NextConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I18NextConnection.h; sourceTree = "<group>"; };
 		0F020087182BAC160079D93C /* I18NextConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I18NextConnection.m; sourceTree = "<group>"; };
 		0F0C8166182AC555001A5CED /* I18NextLoadSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I18NextLoadSpec.m; sourceTree = "<group>"; };
@@ -119,6 +131,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		01165F681D59CFA900682947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F20FD15181EC0B00008F1C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,11 +160,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01165F6D1D59CFA900682947 /* i18nextiOS */ = {
+			isa = PBXGroup;
+			children = (
+				01165F6E1D59CFA900682947 /* i18nextiOS.h */,
+				01165F701D59CFA900682947 /* Info.plist */,
+			);
+			path = i18nextiOS;
+			sourceTree = "<group>";
+		};
 		0F20FD0F181EC0B00008F1C8 = {
 			isa = PBXGroup;
 			children = (
 				0F20FD1D181EC0B00008F1C8 /* src */,
 				0F20FD31181EC0B00008F1C8 /* spec */,
+				01165F6D1D59CFA900682947 /* i18nextiOS */,
 				0F20FD1A181EC0B00008F1C8 /* Frameworks */,
 				0F20FD19181EC0B00008F1C8 /* Products */,
 				824077D833A048FA8DE6C512 /* Pods */,
@@ -157,6 +186,7 @@
 			children = (
 				0F20FD18181EC0B00008F1C8 /* libi18next.a */,
 				0FD96A64181ED7230024F886 /* i18nextspec.xctest */,
+				01165F6C1D59CFA900682947 /* i18nextiOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,7 +282,37 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		01165F691D59CFA900682947 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F0CA661D5D863500B4F4D5 /* I18Next.h in Headers */,
+				01165F6F1D59CFA900682947 /* i18nextiOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		01165F6B1D59CFA900682947 /* i18nextiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01165F711D59CFA900682947 /* Build configuration list for PBXNativeTarget "i18nextiOS" */;
+			buildPhases = (
+				01165F671D59CFA900682947 /* Sources */,
+				01165F681D59CFA900682947 /* Frameworks */,
+				01165F691D59CFA900682947 /* Headers */,
+				01165F6A1D59CFA900682947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = i18nextiOS;
+			productName = i18nextiOS;
+			productReference = 01165F6C1D59CFA900682947 /* i18nextiOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		0F20FD17181EC0B00008F1C8 /* i18next */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F20FD3B181EC0B00008F1C8 /* Build configuration list for PBXNativeTarget "i18next" */;
@@ -296,9 +356,13 @@
 		0F20FD10181EC0B00008F1C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = i18next;
 				TargetAttributes = {
+					01165F6B1D59CFA900682947 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					0FD96A63181ED7230024F886 = {
 						TestTargetID = 0F20FD17181EC0B00008F1C8;
 					};
@@ -320,11 +384,19 @@
 			targets = (
 				0F20FD17181EC0B00008F1C8 /* i18next */,
 				0FD96A63181ED7230024F886 /* i18nextspec */,
+				01165F6B1D59CFA900682947 /* i18nextiOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		01165F6A1D59CFA900682947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FD96A62181ED7230024F886 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +442,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		01165F671D59CFA900682947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F0CA611D5D85BC00B4F4D5 /* I18NextConnection.m in Sources */,
+				01F0CA651D5D85D000B4F4D5 /* NSString+I18Next.m in Sources */,
+				01F0CA601D5D85B700B4F4D5 /* I18NextCache.m in Sources */,
+				01F0CA621D5D85C200B4F4D5 /* I18NextLoader.m in Sources */,
+				01F0CA641D5D85CC00B4F4D5 /* NSObject+I18Next.m in Sources */,
+				01F0CA631D5D85C600B4F4D5 /* I18NextPlurals.m in Sources */,
+				01F0CA5F1D5D85B000B4F4D5 /* I18Next.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F20FD14181EC0B00008F1C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +520,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		01165F721D59CFA900682947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = i18nextiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = i18next.i18nextiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		01165F731D59CFA900682947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = i18nextiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = i18next.i18nextiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		0F20FD39181EC0B00008F1C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,26 +657,33 @@
 		0F20FD3C181EC0B00008F1C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				DSTROOT = /tmp/i18next.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/i18next-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "src/i18next-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		0F20FD3D181EC0B00008F1C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				DSTROOT = /tmp/i18next.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/i18next-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "src/i18next-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -573,6 +728,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01165F711D59CFA900682947 /* Build configuration list for PBXNativeTarget "i18nextiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01165F721D59CFA900682947 /* Debug */,
+				01165F731D59CFA900682947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0F20FD13181EC0B00008F1C8 /* Build configuration list for PBXProject "i18next" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

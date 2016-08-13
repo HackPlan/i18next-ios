@@ -10,8 +10,9 @@
 
 @interface I18NextConnection ()
 
-@property (nonatomic, strong) NSURLConnection* connection;
-@property (nonatomic, strong) NSHTTPURLResponse* response;
+@property (nonatomic, strong) NSURLSession* session;
+@property (nonatomic, strong) NSURLSessionTask* task;
+@property (nonatomic, strong) NSURLResponse* response;
 @property (nonatomic, strong) NSMutableData* responseData;
 
 @end
@@ -36,6 +37,7 @@
         self.request = request;
         self.queue = queue;
         self.completionHandler = completionHandler;
+        self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue: queue];
         if (start) {
             [self start];
         }
@@ -48,15 +50,19 @@
 }
 
 - (void)start {
-    NSURLConnection* connection = [[NSURLConnection alloc] initWithRequest:self.request delegate:self startImmediately:NO];
-    self.connection = connection;
-    [connection scheduleInRunLoop:NSRunLoop.mainRunLoop forMode:NSDefaultRunLoopMode];
-    [connection start];
+    self.task = [self.session
+        dataTaskWithRequest:self.request
+        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            self.task = nil;
+            self.responseData = [NSMutableData dataWithData:data];
+            self.response = response;
+            [self completeWithResponse:self.response data:self.responseData error:error];
+        }];
 }
 
 - (void)cancel {
-    [self.connection cancel];
-    self.connection = nil;
+    [self.task cancel];
+    self.task = nil;
     
     NSDictionary *userInfo = nil;
     if (self.request.URL) {
@@ -72,30 +78,6 @@
         self.completionHandler = nil;
         [self.queue addOperationWithBlock:^{b(response, data, error);}];
     }
-}
-
-#pragma mark NSURLConnectionDelegate
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response {
-    self.response = response;
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    if (!self.responseData) {
-        self.responseData = [NSMutableData dataWithData:data];
-    } else {
-        [self.responseData appendData:data];
-    }
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)_connection {
-    self.connection = nil;
-    [self completeWithResponse:self.response data:self.responseData error:nil];
-}
-
-- (void)connection:(NSURLConnection *)_connection didFailWithError:(NSError *)error {
-    self.connection = nil;
-    [self completeWithResponse:self.response data:self.responseData error:error];
 }
 
 @end

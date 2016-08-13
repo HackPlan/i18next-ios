@@ -15,7 +15,7 @@
 // License: BSD
 // Author:  Leonard van Driel, 2012
 
-@interface I18NextConnection : NSObject<NSURLConnectionDelegate>
+@interface I18NextConnection : NSObject<NSURLSessionDelegate>
 
 @property (nonatomic, copy) NSURLRequest *request;
 @property (nonatomic, strong) NSOperationQueue *queue;

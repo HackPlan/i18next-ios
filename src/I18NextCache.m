@@ -36,7 +36,7 @@
     for (id l in langs) {
         if ([l isKindOfClass:[NSString class]]) {
             NSString* lang = l;
-            NSString* path = [[NSBundle bundleForClass:[self class]] pathForResource:lang ofType:@"lproj"];
+            NSString* path = [[NSBundle mainBundle] pathForResource:lang ofType:@"lproj"];
             NSString* langFile = [path stringByAppendingPathComponent:filename];
             if (langFile) {
                 [langsToRead addObject:lang];
